@@ -68,15 +68,17 @@ class TestBooksCollector:
 
         assert collector.get_books_genre() == {}
 
-    def test_get_books_for_children_age_rating_books_only_result_empty(self):
+    def test_get_books_for_children_one_no_age_rating_book_result_one(self):
         collector = BooksCollector()
 
         collector.add_new_book("Кладбище домашних животных")
         collector.set_book_genre("Кладбище домашних животных", "Ужасы")
         collector.add_new_book("Убийство в Восточном Экспрессе")
         collector.set_book_genre("Убийство в Восточном Экспрессе", "Детективы")
+        collector.add_new_book("Двенадцать стульев")
+        collector.set_book_genre("Двенадцать стульев", "Комедии")
 
-        assert collector.get_books_for_children() == []
+        assert len(collector.get_books_for_children()) == 1
 
     def test_add_book_in_favorites_two_books_two_books_added(self):
         collector = BooksCollector()
