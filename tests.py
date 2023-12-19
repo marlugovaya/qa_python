@@ -84,9 +84,7 @@ class TestBooksCollector:
         collector = BooksCollector()
 
         collector.add_new_book("Кладбище домашних животных")
-        collector.set_book_genre("Кладбище домашних животных", "Ужасы")
         collector.add_new_book("Дюна")
-        collector.set_book_genre("Дюна", "Фантастика")
 
         collector.add_book_in_favorites("Кладбище домашних животных")
         collector.add_book_in_favorites("Дюна")
@@ -97,9 +95,7 @@ class TestBooksCollector:
         collector = BooksCollector()
 
         collector.add_new_book("Кладбище домашних животных")
-        collector.set_book_genre("Кладбище домашних животных", "Ужасы")
         collector.add_new_book("Дюна")
-        collector.set_book_genre("Дюна", "Фантастика")
 
         collector.add_book_in_favorites("Дюна")
         collector.delete_book_from_favorites("Кладбище домашних животных")
@@ -110,9 +106,7 @@ class TestBooksCollector:
         collector = BooksCollector()
 
         collector.add_new_book("Кладбище домашних животных")
-        collector.set_book_genre("Кладбище домашних животных", "Ужасы")
         collector.add_new_book("Дюна")
-        collector.set_book_genre("Дюна", "Фантастика")
 
         collector.add_book_in_favorites("Дюна")
 
