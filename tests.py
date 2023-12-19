@@ -39,13 +39,13 @@ class TestBooksCollector:
 
         assert len(collector.get_books_genre()) == 0
 
-    def test_set_book_genre_genre_dont_exist_no_genre_set(self):
+    def test_set_book_genre_genre_in_list_genre_set(self):
         collector = BooksCollector()
-        collector.add_new_book("Джейн Эйр")
+        collector.add_new_book("Двенадцать стульев")
 
-        collector.set_book_genre("Джейн Эйр", "Роман")
+        collector.set_book_genre("Двенадцать стульев", "Комедии")
 
-        assert collector.books_genre["Джейн Эйр"] == ""
+        assert collector.books_genre["Двенадцать стульев"] == "Комедии"
 
     def test_get_book_genre_book_without_genre_result_empty(self):
         collector = BooksCollector()
